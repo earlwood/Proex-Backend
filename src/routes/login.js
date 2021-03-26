@@ -12,8 +12,7 @@ router.get('/getRoles', (req, res) =>{
     const sqlGet = "call GetRolesDropDownList()";
     db.query(sqlGet, (err, result) =>{
         res.send(result);
-    });
-           
+    });           
 });
 
 router.post('/insertUser', verifyToken,  (req, res) =>{

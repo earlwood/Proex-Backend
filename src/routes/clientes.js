@@ -20,7 +20,6 @@ router.get('/getClientesInfo', verifyToken, (req, res) =>{
     });
 });
 
-
 router.get('/getSellers', (req, res) =>{
     const sqlGet = "call GetSellersDropDownList()";
     db.query(sqlGet, (err, result) =>{

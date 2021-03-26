@@ -104,6 +104,7 @@ router.get('/selectVenta/:id', (req, res) =>{
         }
         else{
             res.send(result);
+            // console.log(result);
         };
     })
 });

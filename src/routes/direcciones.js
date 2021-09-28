@@ -50,7 +50,6 @@ router.delete('/deleteDireccion/:id', verifyToken, (req, res) =>{
                         status: 400,
                         success: false
                     });
-                    console.log(result);
                 }
                 else{
                     res.status(200).json({
@@ -71,7 +70,6 @@ router.get('/SelectDireccion/:id', (req, res) =>{
                 status: 400,
                 success: false
             });
-            console.log(result);
         }
         else{
             res.send(result);

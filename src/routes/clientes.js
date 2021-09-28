@@ -23,7 +23,6 @@ router.get('/getClientesInfo', verifyToken, (req, res) =>{
 router.get('/getSellers', (req, res) =>{
     const sqlGet = "call GetSellersDropDownList()";
     db.query(sqlGet, (err, result) =>{
-        console.log(result);
         res.send(result);
     })
 });
@@ -95,7 +94,6 @@ router.get('/SelectCliente/:id', (req, res) =>{
                 status: 400,
                 success: false
             });
-            console.log(result);
         }
         else{
                 res.send(result);

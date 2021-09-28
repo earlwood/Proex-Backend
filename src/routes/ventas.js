@@ -121,8 +121,8 @@ router.get('/getRatexLb/:id', (req, res) =>{
             console.log(result);
         }
         else{
-            res.json(result[0][0].Rate_x_Lb);
-            // console.log(result[0][0].Rate_x_Lb);
+            res.json({rateXLb: result[0][0].Rate_x_Lb, rateXVol: result[0][0].Rate_x_Vol });
+            // console.log(result[0][0]);
         };
     })
 });
